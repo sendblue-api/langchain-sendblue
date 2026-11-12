@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-sendblue"
+version = "0.1.0"
+description = "Official Sendblue messaging tools for LangChain and LangGraph"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Sendblue", email = "support@sendblue.com"}]
+dependencies = ["langchain-core>=1.0,<2.0", "httpx>=0.28.1,<1", "pydantic>=2.7.4,<3"]
+
+[project.urls]
+Homepage = "https://www.sendblue.com/"
+Repository = "https://github.com/sendblue-api/langchain-sendblue"
+Documentation = "https://github.com/sendblue-api/langchain-sendblue#readme"
+Issues = "https://github.com/sendblue-api/langchain-sendblue/issues"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "build>=1.2,<2", "twine>=6,<7", "ruff>=0.9"]
+
+[tool.hatch.build.targets.wheel]
+core-metadata-version = "2.4"
+packages = ["langchain_sendblue"]
+
+[tool.hatch.build.targets.sdist]
+core-metadata-version = "2.4"
